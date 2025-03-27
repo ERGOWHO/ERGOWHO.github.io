@@ -19,7 +19,7 @@ const PersonalHomepage = () => {
           <p className="text-sm text-gray-400">Ph.D. Student | Computer Vision & Machine Learning</p>
         </div>
         <ul className="space-y-4 text-sm">
-          {['Home', 'About & Education', 'Projects', 'Experience', 'Awards', 'Skills'].map((section) => (
+          {['Home', 'About & Education', 'Projects', 'Publications', 'Experience', 'Awards', 'Skills'].map((section) => (
             <li key={section}>
               <Link
                 to={section.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}
@@ -44,7 +44,7 @@ const PersonalHomepage = () => {
           </div>
         </Element>
 
-        {/* About & Education Section */}
+        {/* About */}
         <Element name="about-education" className="px-12 py-24 bg-gray-800">
           <h2 className="text-4xl font-bold mb-6">About Me & Education</h2>
           <div className="space-y-8">
@@ -77,6 +77,20 @@ const PersonalHomepage = () => {
               </div>
             </div>
           </div>
+          {/* News Update Component */}
+          <div className="p-4 bg-gray-800">
+            <h2 className="text-2xl font-bold mb-4">News & Updates</h2>
+            <div className="space-y-3">
+              {["2025-03-25: Our paper on XYZ is accepted to CVPR 2025.", "2025-03-20: Invited talk at ABC University.", "2025-03-15: Released new project demo."]
+                .map((news, index) => (
+                <Card key={index} className="bg-gray-700">
+                  <CardContent>
+                    <p className="text-sm text-gray-300">{news}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
         </Element>
 
         {/* Projects Section */}
@@ -96,6 +110,42 @@ const PersonalHomepage = () => {
                     </div>
                   </div>
                 </a>
+              </motion.div>
+            ))}
+          </div>
+        </Element>
+
+                {/* Publications Section */}
+                <Element name="publications" className="px-12 py-24 bg-gray-800">
+          <h2 className="text-4xl font-bold mb-6">Publications</h2>
+          <div className="space-y-6">
+            {[{
+              title: "A Novel Approach to XYZ",
+              authors: "Yue Hu, John Doe, Jane Smith",
+              conference: "CVPR 2025",
+              links: { paper: "https://example.com/paper1", project: "https://example.com/project1" }
+            }, {
+              title: "Deep Learning for ABC",
+              authors: "Yue Hu, Alice Brown, Robert White",
+              conference: "NeurIPS 2024",
+              links: { paper: "https://example.com/paper2", project: "https://example.com/project2" }
+            }].map((pub, index) => (
+              <motion.div key={index} whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
+                <Card className="bg-gray-700 shadow-md">
+                  <CardContent>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {index + 1}. <a href={pub.links.paper} target="_blank" rel="noopener noreferrer">{pub.title}</a>
+                    </h3>
+                    <p className="text-gray-300 mb-1">Authors: {pub.authors}</p>
+                    <p className="text-gray-300 mb-2">
+                      Published at: <a href={pub.links.project} target="_blank" rel="noopener noreferrer" className="text-blue-400">{pub.conference}</a>
+                    </p>
+                    <div className="flex space-x-4">
+                      <Button as="a" href={pub.links.paper} target="_blank">Paper</Button>
+                      <Button as="a" href={pub.links.project} target="_blank">Project</Button>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
