@@ -22,7 +22,7 @@ const PersonalHomepage = () => {
 
   const backgroundStyle = {
     transform: `translateY(${scrollY *0.3}px)`,
-    opacity: Math.max(1 - scrollY / 600, 0),
+    opacity: Math.max(1 - scrollY / 1200, 0),
   };
   return (
     <div className="min-h-screen flex bg-gradient-to-b from-gray-900 to-gray-800 text-white">
