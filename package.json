@@ -1,6 +1,6 @@
 {
   "name": "personal-homepage",
-  "homepage": "https://ERGOWHO.github.io/personalpage",
+  "homepage": "https://ergowho.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
