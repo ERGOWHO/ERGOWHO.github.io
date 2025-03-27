@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from './components/ui/Card';
 import { Button } from './components/ui/Button';
 import { motion } from 'framer-motion';
 import { Link, Element } from 'react-scroll';
 
 const PersonalHomepage = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const backgroundStyle = {
+    transform: `translateY(${scrollY *0.3}px)`,
+    opacity: Math.max(1 - scrollY / 600, 0),
+  };
   return (
     <div className="min-h-screen flex bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       {/* Sidebar */}
@@ -19,7 +38,7 @@ const PersonalHomepage = () => {
           <p className="text-sm text-gray-400">Ph.D. Student | Computer Vision & Machine Learning</p>
         </div>
         <ul className="space-y-4 text-sm">
-          {['Home', 'About & Education', 'Projects', 'Publications', 'Experience', 'Awards', 'Skills'].map((section) => (
+          {['Home', 'About', 'Projects', 'Publications', 'Experience', 'Awards', 'Skills'].map((section) => (
             <li key={section}>
               <Link
                 to={section.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}
@@ -36,59 +55,80 @@ const PersonalHomepage = () => {
 
       {/* Main Content */}
       <div className="ml-60 flex-1 overflow-y-auto">
-        {/* Home Section */}
-        <Element name="home" className="h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/path-to-your-background.jpg)' }}>
+        {/* Home Section with Parallax Effect */}
+        <div
+          className="relative h-screen flex items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: 'url(/assets/home.jpg)', ...backgroundStyle }}
+        >
           <div className="text-center">
-            <h1 className="text-6xl font-bold mb-4"> Yue Hu </h1>
-            <p className="text-2xl mb-6">Explore My Work and Achievements</p>
+            <motion.h1
+              initial={{ opacity: 1 }}
+              animate={{ opacity: Math.max(1 - scrollY / 300, 0) }}
+              className="text-7xl font-bold text-white mb-6"
+            >
+              Welcome to My Homepage
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 1 }}
+              animate={{ opacity: Math.max(1 - scrollY / 300, 0) }}
+              className="text-3xl text-white"
+            >
+              Scroll Down to Discover More
+            </motion.p>
           </div>
-        </Element>
+        </div>
 
-        {/* About */}
-        <Element name="about-education" className="px-12 py-24 bg-gray-800">
-          <h2 className="text-4xl font-bold mb-6">About Me & Education</h2>
-          <div className="space-y-8">
-            <div>
+        {/* About Section (Enhanced) */}
+        <Element name="about" className="px-12 py-24 bg-gray-800">
+          <div className="flex space-x-12">
+            {/* Left Column - Photos and Research Interests */}
+            <div className="w-1/3">
+              <img src="/assets/your-photo.jpg" alt="Your Research Photo" className="w-full rounded-xl mb-6" />
               <h3 className="text-2xl font-bold mb-4">Research Interests</h3>
-              <p className="text-lg text-gray-300 mb-4">
-                High-fidelity 3D Reconstruction, 3D vision, 3D geometry, 3D Gaussian Splatting, Neural Radiance Fields (NeRF), 
-                Simultaneous Localization and Mapping (SLAM), Structure from Motion (SfM), Relighting. <br/>
-                2D Object Detection: YOLO, DETR, and related architectures. <br/>
-                Wireless Application, Backscatter Communication, Passive Long-Range Low-Power Systems, 
-                LoRa-based IoT Networks, FPGA, Embedded System.
+              <p className="text-gray-300 mb-4">
+                High-fidelity 3D Reconstruction, 3D vision, 3D geometry, 3D Gaussian Splatting, Neural Radiance Fields (NeRF), SLAM, SfM, Relighting.<br/>
+                2D Object Detection: YOLO, DETR, and related architectures.<br/>
+                Wireless Application, Backscatter Communication, Passive Long-Range Low-Power Systems, LoRa-based IoT Networks, FPGA, Embedded Systems.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Education</h3>
-              <div className="space-y-4">
-                {[
-                  'Ph.D. in Computer Engineering, USC (GPA 3.83/4.0) - 01/2021 to 05/2026 (Expected)',
-                  'M.S. in Computer Engineering, USC (GPA 3.88/4.0) - 01/2021 to 12/2023',
-                  'Ph.D. in Software Engineering (Transferred to USC), Northwest University - 09/2018 to 12/2020',
-                  'B.S. in Computer Science and Technology, Northwest University (Graduated with Honors) - 09/2013 to 06/2017'
-                ].map((edu, index) => (
-                  <Card key={index} className="bg-gray-700 shadow-md">
-                    <CardContent>
-                      <h3 className="text-lg font-semibold text-gray-300">{edu}</h3>
-                    </CardContent>
-                  </Card>
-                ))}
+            {/* Right Column - Education & News Updates */}
+            <div className="w-2/3 space-y-12">
+              {/* Education Section */}
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Education</h3>
+                <div className="space-y-4">
+                  {["Ph.D. in Computer Engineering, USC (GPA 3.83/4.0) - 01/2021 to 05/2026 (Expected)",
+                    "M.S. in Computer Engineering, USC (GPA 3.88/4.0) - 01/2021 to 12/2023",
+                    "Ph.D. in Software Engineering (Transferred to USC), Northwest University - 09/2018 to 12/2020",
+                    "B.S. in Computer Science and Technology, Northwest University (Graduated with Honors) - 09/2013 to 06/2017"
+                  ].map((edu, index) => (
+                    <Card key={index} className="bg-gray-700 shadow-md">
+                      <CardContent>
+                        <p className="text-gray-300">{edu}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
-            </div>
-          </div>
-          {/* News Update Component */}
-          <div className="p-4 bg-gray-800">
-            <h2 className="text-2xl font-bold mb-4">News & Updates</h2>
-            <div className="space-y-3">
-              {["2025-03-25: Our paper on XYZ is accepted to CVPR 2025.", "2025-03-20: Invited talk at ABC University.", "2025-03-15: Released new project demo."]
-                .map((news, index) => (
-                <Card key={index} className="bg-gray-700">
-                  <CardContent>
-                    <p className="text-sm text-gray-300">{news}</p>
-                  </CardContent>
-                </Card>
-              ))}
+
+              {/* News & Updates Section */}
+              <div>
+                <h3 className="text-2xl font-bold mb-4">News & Updates</h3>
+                <div className="space-y-3">
+                  {[
+                    "2025-03-25: Our paper on XYZ is accepted to CVPR 2025.",
+                    "2025-03-20: Invited talk at ABC University.",
+                    "2025-03-15: Released new project demo."
+                  ].map((news, index) => (
+                    <Card key={index} className="bg-gray-700">
+                      <CardContent>
+                        <p className="text-sm text-gray-300">{news}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </Element>
