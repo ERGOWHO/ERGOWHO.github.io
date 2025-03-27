@@ -39,7 +39,7 @@ const PersonalHomepage = () => {
         {/* Home Section */}
         <Element name="home" className="h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/path-to-your-background.jpg)' }}>
           <div className="text-center">
-            <h1 className="text-6xl font-bold mb-4">Welcome to My Homepage</h1>
+            <h1 className="text-6xl font-bold mb-4">WYue Hu </h1>
             <p className="text-2xl mb-6">Explore My Work and Achievements</p>
           </div>
         </Element>
