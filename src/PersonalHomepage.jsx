@@ -121,7 +121,7 @@ const PersonalHomepage = () => {
                 Wireless Application, Backscatter Communication, Passive Long-Range Low-Power Systems, LoRa-based IoT Networks, FPGA, Embedded Systems.
               </p>
             </div>
-
+ 
             {/* Right Column - Education & News Updates */}
             <div className="w-2/3 space-y-12">
               {/* Education Section */}
