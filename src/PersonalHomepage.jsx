@@ -189,7 +189,7 @@ const PersonalHomepage = () => {
                 <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
                     <div className="w-1/4 mr-6">
-                      <img src="/assets/SplatMAP_demo_preview.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
+                      <img src="/assets/atomgs.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">{projectTitle}</h3>
