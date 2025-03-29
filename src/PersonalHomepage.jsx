@@ -115,11 +115,17 @@ const PersonalHomepage = () => {
             <div className="w-1/4">
               <img src="/assets/photo.JPG" alt="Your Research Photo" className="w-full rounded-xl mb-6" />
               <h3 className="text-4xl font-bold mb-4">Research Interests</h3>
-              <p className="text-gray-300 mb-4">
-                High-fidelity 3D Reconstruction, 3D vision, 3D geometry, 3D Gaussian Splatting, Neural Radiance Fields (NeRF), SLAM, SfM, Relighting.<br/>
-                2D Object Detection: YOLO, DETR, and related architectures.<br/>
-                Wireless Application, Backscatter Communication, Passive Long-Range Low-Power Systems, LoRa-based IoT Networks, FPGA, Embedded Systems.
-              </p>
+                <p className="mb-4">
+                  I am a researcher specializing in:
+                </p>
+                <ul className="list-disc pl-6 mb-4">
+                  <li><strong>3D Vision & Geometry:</strong> 3D Gaussian Splatting, Point Cloud Rendering, NeRF, SLAM, SfM, Relighting.</li>
+                  <li><strong>2D Object Detection and Synthetic Dataset:</strong> YOLO, DETR, Unreal Engine etc.</li>
+                  <li><strong>Wireless Communication:</strong> Backscatter, LoRa IoT, FPGA, Embedded Systems.</li>
+                </ul>
+                <p>
+                  Bridging computer vision and wireless communication for innovative solutions.
+                </p>
             </div>
  
             {/* Right Column - Education & News Updates */}
@@ -147,11 +153,11 @@ const PersonalHomepage = () => {
                 <h3 className="text-2xl font-bold mb-4">News & Updates</h3>
                 <div className="space-y-3">
                   {[
-                    "2025-03-24: Our paper on SplatMap: Online Dense Monocular SLAM with 3D Gaussian Splatting is accepted to 2025 ACM SIGGRAPH SYMPOSIUM ON INTERACTIVE 3D GRAPHICS AND GAMES(I3D 2025) with oral presentation.",
-                    "2024-11-05: Our work FireLoc: Low-latency Multi-modal Wildfire Geolocation Presented at Sensys 2024, Hangzhou, China",
-                    "2024-11-03: Our work Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types Presented at MIT The Engine, SiPS 2024, USA.",
-                    "2024-09-16: Our paper FireLoc was accepted on Top Tier Conference for Embedded Networked Sensor Systems (SenSys 2024)",
-                    "2024-09-10: Our paper AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field accepted to BMVC 2024"
+                    "🎉 2025-03-24: Our paper on SplatMap: Online Dense Monocular SLAM with 3D Gaussian Splatting is accepted to 2025 ACM SIGGRAPH SYMPOSIUM ON INTERACTIVE 3D GRAPHICS AND GAMES(I3D 2025) with oral presentation.",
+                    "🔥 2024-11-05: Our work FireLoc: Low-latency Multi-modal Wildfire Geolocation Presented at Sensys 2024, Hangzhou, China",
+                    "🔥 2024-11-03: Our work Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types Presented at MIT The Engine, SiPS 2024, USA.",
+                    "🎉 2024-09-16: Our paper FireLoc was accepted on Top Tier Conference for Embedded Networked Sensor Systems (SenSys 2024)",
+                    "🎉 2024-09-10: Our paper AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field accepted to BMVC 2024"
                   ].map((news, index) => (
                     <Card key={index} className="bg-gray-700">
                       <CardContent>
@@ -167,7 +173,7 @@ const PersonalHomepage = () => {
 
         {/* Projects Section */}
         <Element name="projects" className="px-12 py-24 bg-gray-800">
-          <h2 className="text-4xl font-bold mb-6">Research Projects</h2>
+          <h2 className="text-4xl font-bold mb-6">Selected Projects</h2>
           <div className="space-y-6">
             {["SLAM & 3D Gaussian Splatting"].map((projectTitle, index) => (
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
@@ -175,6 +181,21 @@ const PersonalHomepage = () => {
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
                     <div className="w-1/4 mr-6">
                       <img src="/assets/SplatMAP_demo_preview.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white">{projectTitle}</h3>
+                      <p className="text-gray-300 mt-2">Click to see project details and video demonstrations.</p>
+                    </div>
+                  </div>
+                </a>
+              </motion.div>
+            ))}
+            {["SOL-2DGS: Outdoor Scene Relighting under Dynamic Lighting Conditions with Differentiable Ray Tracer and Sunlight Modeling"].map((projectTitle, index) => (
+              <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
+                <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
+                  <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
+                    <div className="w-1/3 mr-6">
+                      <img src="/assets/2drelight.png" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">{projectTitle}</h3>
@@ -203,8 +224,8 @@ const PersonalHomepage = () => {
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
                 <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
-                    <div className="w-1/4 mr-6">
-                      <img src="/assets/SplatMAP_demo_preview.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
+                    <div className="w-1/6 mr-6">
+                      <img src="/assets/letsroll.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">{projectTitle}</h3>
@@ -218,7 +239,7 @@ const PersonalHomepage = () => {
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
                 <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
-                    <div className="w-1/4 mr-6">
+                    <div className="w-1/6 mr-6">
                       <img src="/assets/fireloc.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="flex-1">
@@ -233,8 +254,8 @@ const PersonalHomepage = () => {
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
                 <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
-                    <div className="w-1/4 mr-6">
-                      <img src="/assets/fireloc.mp4" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
+                    <div className="w-1/6 mr-6">
+                      <img src="/assets/firefly.jpg" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">{projectTitle}</h3>
@@ -248,7 +269,7 @@ const PersonalHomepage = () => {
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
                 <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
-                    <div className="w-1/4 mr-6">
+                    <div className="w-1/6 mr-6">
                       <img src="/assets/plora.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
                     </div>
                     <div className="flex-1">
