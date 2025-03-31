@@ -73,7 +73,8 @@ const PersonalHomepage = () => {
               animate={{ opacity: Math.max(1 - scrollY / 300, 0) }}
               className="text-4xl text-white"
             >
-              Ph.D. Student | University of Southern California | Institute for Creative Technologies | Computer Vision & Machine Learning
+              Ph.D. Student | Computer Vision & Machine Learning
+              University of Southern California | Institute for Creative Technologies 
             </motion.p>
 
             <motion.p
