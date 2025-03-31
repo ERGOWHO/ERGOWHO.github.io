@@ -73,7 +73,7 @@ const PersonalHomepage = () => {
               animate={{ opacity: Math.max(1 - scrollY / 300, 0) }}
               className="text-4xl text-white"
             >
-              Ph.D. Student | Computer Vision & Machine Learning
+              Ph.D. Student | University of Southern California | Institute for Creative Technologies | Computer Vision & Machine Learning
             </motion.p>
 
             <motion.p
@@ -427,7 +427,7 @@ const PersonalHomepage = () => {
           <ul className="list-disc ml-8 text-gray-300">
             <li>Frameworks & Tools: PyTorch, MMdetection, NeRFstudio, Unreal Engine, Unix/Linux, GNU Radio</li>
             <li>Vision Models: 3DGS, NeRF, DUST3R, MaSt3R, SLAM, YOLOv7, YOLOv8, DETR</li>
-            <li>Programming Languages: Python, Verilog, C++, C, MATLAB, Git, SQL, Postgre, LaTeX</li>
+            <li>Programming Languages: Python, Verilog, C++, C, MATLAB, Git, JS, SQL, Postgre, LaTeX</li>
           </ul>
         </Element>
       </div>
