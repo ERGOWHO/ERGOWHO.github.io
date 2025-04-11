@@ -35,9 +35,9 @@ const PersonalHomepage = () => {
             className="w-40 h-28 rounded-full mx-auto mb-4"
           />
           <h1 className="text-4xl font-bold">Yue Hu</h1>
-          <p className="text-lg text-gray-400">Ph.D. Student | Computer Vision & Machine Learning</p>
+          <p className="text-sm text-gray-400">Science enthusiast, lifelong learner, and driven by the contribution to the advancement of society</p>
         </div>
-        <ul className="space-y-4 text-lg">
+        <ul className="space-y-6 text-lg">
           {['Home', 'About', 'Projects', 'Publications', 'Experience', 'Awards', 'Skills'].map((section) => (
             <li key={section}>
               <Link
@@ -82,7 +82,6 @@ const PersonalHomepage = () => {
             >
               University of Southern California | Institute for Creative Technologies 
             </motion.p>
-
             <motion.p
               initial={{ opacity: 1 }}
               animate={{ opacity: Math.max(1 - scrollY / 300, 0) }}
@@ -184,7 +183,7 @@ const PersonalHomepage = () => {
           <div className="space-y-6">
             {["SLAM & 3D Gaussian Splatting"].map((projectTitle, index) => (
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
-                <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
+                <a href={"https://ergowho.github.io/SplatMap/"} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
                     <div className="w-1/4 mr-6">
                       <img src="/assets/SplatMAP_demo_preview.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
@@ -214,7 +213,7 @@ const PersonalHomepage = () => {
             ))}
              {["AtomGS"].map((projectTitle, index) => (
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
-                <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
+                <a href={`https://rongliu-leo.github.io/AtomGS/`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
                     <div className="w-1/4 mr-6">
                       <img src="/assets/atomgs.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
@@ -274,7 +273,7 @@ const PersonalHomepage = () => {
             ))}
             {["Passive Long-Distance Low-Power Communication System"].map((projectTitle, index) => (
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
-                <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
+                <a href={`https://www.youtube.com/watch?v=yHocu_n2udI`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
                     <div className="w-1/6 mr-6">
                       <img src="/assets/plora.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
@@ -295,55 +294,55 @@ const PersonalHomepage = () => {
           <h2 className="text-4xl font-bold mb-6">Selected Publications</h2>
           <div className="space-y-6">
             {[{
-              title: "SplatMap: Online Dense Monocular SLAM with 3D Gaussian Splatting",
+              title: "SplatMAP: Online Dense Monocular SLAM with 3D Gaussian Splatting",
               authors: "Hu, Y., Rong, L., Meida, c., et al.",
               conference: "2025 ACM SIGGRAPH SYMPOSIUM ON INTERACTIVE 3D GRAPHICS AND GAMES( I3D 2025)",
-              links: { paper: "https://example.com/paper1", project: "https://example.com/project1" }
+              links: { paper: "https://arxiv.org/abs/2501.07015", project: "https://ergowho.github.io/SplatMap/", Video: "https://www.youtube.com/watch?v=Pr_kyWQQkGo" }
             }, {
               title: "Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types",
               authors: "Hu, Y., Datta, G., Beerel, K., et al.",
               conference: "SiPS 2024, MIT, USA.",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://ieeexplore.ieee.org/abstract/document/10768224"}
             }, {
               title: "AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field",
               authors: "Liu, R., Xu, R., Hu, Y., et al.",
               conference: "BMVC 2024, Glasgow, UK.",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://arxiv.org/abs/2405.12369", project: "https://rongliu-leo.github.io/AtomGS/", Video: "https://www.youtube.com/watch?v=1B7oga_1BqE" }
             }, {
               title: "FireFly: A Synthetic Dataset for Ember Detection in Wildfire",
               authors: "Hu, Y., Ye, X., Liu, Y., et al.",
               conference: "The 5th Workshop on AI for Humanitarian Assistance and Disaster Response, ICCV 2023, Paris, France.",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://openaccess.thecvf.com/content/ICCV2023W/AIHADR/html/Hu_FireFly_A_Synthetic_Dataset_for_Ember_Detection_in_Wildfire_ICCVW_2023_paper.html", project: "https://github.com/ERGOWHO/Firefly2.0", Data: "https://drive.google.com/drive/folders/1UVhlHRGG9FXKupshV_qCraUKrQHrdqSV" }
             }, {
               title: "FireLoc: Low-latency Multi-modal Wildfire Geolocation",
               authors: "Fu, X., Hu, Y., Sutrave, P., et al.",
               conference: "The 22nd ACM Conference on Embedded Networked Sensor Systems ( SenSys 2024), Hangzhou, China.",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://dl.acm.org/doi/abs/10.1145/3666025.3699318", news: "https://sustainability.usc.edu/2025/02/05/could-crowdsourcing-hold-the-key-to-early-wildfire-detection/"}
             }, {
               title: "PLoRa: A Passive Long-Range Data Network from Ambient LoRa Transmissions",
               authors: "Peng, Y., Shangguan, L., Hu, Y., et al.",
               conference: "SIGCOMM 2018, Budapest, Hungary. (First student author)",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://dl.acm.org/doi/10.1145/3230543.3230567", Video: "https://www.youtube.com/watch?v=yHocu_n2udI" }
             }, {
               title: "EasyGo: Low-cost and Robust Geographic Opportunistic Sensing Routing in a Strip Topology Wireless Sensor Network",
               authors: "Liu, C., Fang, D., Hu, Y., et al.",
               conference: "Computer Networks, Volume 143, 9 October 2018, Pages 191-205.",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://www.sciencedirect.com/science/article/abs/pii/S1389128618304857" }
             }, {
               title: "LiReT: A Fine-Grained Self-Adaption Device-Free Localization with Little Human Effort",
               authors: "He, J., Hu, Y., Liu, X., et al..",
               conference: "IEEE International Conference on Smart Computing (SmartComp)",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://ieeexplore.ieee.org/abstract/document/7947020" }
             }, {
               title: "A Lightweight Robust Routing in Strip Wireless Sensor Network with Edge Detect Based Region Divided",
               authors: "Hu, Y., Liu, C., Xu, D., et al.",
               conference: "the 14th Annual International Conference on Mobile Systems, Applications, and Services Companion.(MobiSys 2016), Singapore",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://dl.acm.org/doi/abs/10.1145/2938559.2948811"}
             }, {
               title: "LSVS: Bringing Layer Slicing and Virtual Sinks to Geographic Opportunistic Routing in Strip WSNs",
               authors: "Liu, C., Fang, D., Chen, X., Hu, Y., et al.",
               conference: "IEEE Fifth International Conference on Big Data and Cloud Computing",
-              links: { paper: "https://example.com/paper2", project: "https://example.com/project2", News: "https://example.com/news1" }
+              links: { paper: "https://ieeexplore.ieee.org/abstract/document/7310758"}
             }].map((pub, index) => (
               <motion.div key={index} whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
                 <Card className="bg-gray-700 shadow-md">
@@ -355,10 +354,32 @@ const PersonalHomepage = () => {
                     <p className="text-gray-300 mb-2">
                       Published at: <a href={pub.links.project} target="_blank" rel="noopener noreferrer" className="text-blue-400">{pub.conference}</a>
                     </p>
-                    <div className="flex space-x-4">
-                      <Button as="a" href={pub.links.paper} target="_blank">Paper</Button>
-                      <Button as="a" href={pub.links.project} target="_blank">Project</Button>
-                      <Button as="a" href={pub.links.news} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">News</Button>
+                    <div className="flex flex-wrap gap-4 mt-2">
+                      {pub.links.paper && (
+                        <Button as="a" href={pub.links.paper} target="_blank" rel="noopener noreferrer">
+                          Paper
+                        </Button>
+                      )}
+                      {pub.links.project && (
+                        <Button as="a" href={pub.links.project} target="_blank" rel="noopener noreferrer">
+                          Project
+                        </Button>
+                      )}
+                      {pub.links.Data && (
+                        <Button as="a" href={pub.links.Data} target="_blank" rel="noopener noreferrer">
+                          Data
+                        </Button>
+                      )}
+                      {pub.links.Video && (
+                        <Button as="a" href={pub.links.Video} target="_blank" rel="noopener noreferrer">
+                          Demo
+                        </Button>
+                      )}
+                      {pub.links.news && (
+                        <Button as="a" href={pub.links.news} target="_blank" rel="noopener noreferrer">
+                          News
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
