@@ -228,7 +228,7 @@ const PersonalHomepage = () => {
             ))}
             {["Let's Roll"].map((projectTitle, index) => (
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
-                <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
+                <a href={`https://ieeexplore.ieee.org/abstract/document/10768224`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
                     <div className="w-1/6 mr-6">
                       <img src="/assets/letsroll.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
@@ -243,7 +243,7 @@ const PersonalHomepage = () => {
             ))}
             {["FireLoc2.0: Few-Shot 3D Scene Refinement and Vegetation-Based Fuel Segmentation for Wildfire Mapping"].map((projectTitle, index) => (
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
-                <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
+                <a href={`https://dl.acm.org/doi/abs/10.1145/3666025.3699318`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
                     <div className="w-1/6 mr-6">
                       <img src="/assets/fireloc.gif" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
@@ -258,7 +258,7 @@ const PersonalHomepage = () => {
             ))}
             {["FireFly"].map((projectTitle, index) => (
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
-                <a href={`/projects/${projectTitle.replace(/\s+/g, '-').toLowerCase()}`} className="block">
+                <a href={`https://openaccess.thecvf.com/content/ICCV2023W/AIHADR/html/Hu_FireFly_A_Synthetic_Dataset_for_Ember_Detection_in_Wildfire_ICCVW_2023_paper.html`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
                     <div className="w-1/6 mr-6">
                       <img src="/assets/firefly.jpg" alt="Project Demo" className="w-full h-full object-cover rounded-lg" />
@@ -271,7 +271,7 @@ const PersonalHomepage = () => {
                 </a>
               </motion.div>
             ))}
-            {["Passive Long-Distance Low-Power Communication System"].map((projectTitle, index) => (
+            {["PLoRa: Passive Long-Distance Low-Power Communication System"].map((projectTitle, index) => (
               <motion.div key={index} whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
                 <a href={`https://www.youtube.com/watch?v=yHocu_n2udI`} className="block">
                   <div className="flex p-6 mb-6 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg cursor-pointer">
@@ -302,17 +302,17 @@ const PersonalHomepage = () => {
               title: "Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types",
               authors: "Hu, Y., Datta, G., Beerel, K., et al.",
               conference: "SiPS 2024, MIT, USA.",
-              links: { paper: "https://ieeexplore.ieee.org/abstract/document/10768224"}
+              links: { paper: "https://ieeexplore.ieee.org/abstract/document/10768224", Data: "https://drive.google.com/drive/folders/1O0uoR-jRo5vbCSi3P9R30nPmkcX5M6nE?usp=drive link"}
             }, {
               title: "AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field",
               authors: "Liu, R., Xu, R., Hu, Y., et al.",
               conference: "BMVC 2024, Glasgow, UK.",
-              links: { paper: "https://arxiv.org/abs/2405.12369", project: "https://rongliu-leo.github.io/AtomGS/", Video: "https://www.youtube.com/watch?v=1B7oga_1BqE" }
+              links: { paper: "https://arxiv.org/abs/2405.12369", project: "https://rongliu-leo.github.io/AtomGS/", Video: "https://www.youtube.com/watch?v=1B7oga_1BqE",  poster: "https://bmva-archive.org.uk/bmvc/2024/papers/Paper_577/poster.pdf"}
             }, {
               title: "FireFly: A Synthetic Dataset for Ember Detection in Wildfire",
               authors: "Hu, Y., Ye, X., Liu, Y., et al.",
               conference: "The 5th Workshop on AI for Humanitarian Assistance and Disaster Response, ICCV 2023, Paris, France.",
-              links: { paper: "https://openaccess.thecvf.com/content/ICCV2023W/AIHADR/html/Hu_FireFly_A_Synthetic_Dataset_for_Ember_Detection_in_Wildfire_ICCVW_2023_paper.html", project: "https://github.com/ERGOWHO/Firefly2.0", Data: "https://drive.google.com/drive/folders/1UVhlHRGG9FXKupshV_qCraUKrQHrdqSV" }
+              links: { paper: "https://openaccess.thecvf.com/content/ICCV2023W/AIHADR/html/Hu_FireFly_A_Synthetic_Dataset_for_Ember_Detection_in_Wildfire_ICCVW_2023_paper.html", project: "https://github.com/ERGOWHO/Firefly2.0", poster: "/assets/fireflyposter.pdf", Data: "https://drive.google.com/drive/folders/1UVhlHRGG9FXKupshV_qCraUKrQHrdqSV" }
             }, {
               title: "FireLoc: Low-latency Multi-modal Wildfire Geolocation",
               authors: "Fu, X., Hu, Y., Sutrave, P., et al.",
@@ -378,6 +378,11 @@ const PersonalHomepage = () => {
                       {pub.links.news && (
                         <Button as="a" href={pub.links.news} target="_blank" rel="noopener noreferrer">
                           News
+                        </Button>
+                      )}
+                      {pub.links.poster && (
+                        <Button as="a" href={pub.links.poster} target="_blank" rel="noopener noreferrer">
+                          Poster
                         </Button>
                       )}
                     </div>
