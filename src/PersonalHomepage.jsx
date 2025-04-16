@@ -163,7 +163,7 @@ const PersonalHomepage = () => {
                     "🔥 2024-11-05: Our work FireLoc: Low-latency Multi-modal Wildfire Geolocation Presented at Sensys 2024, Hangzhou, China",
                     "🔥 2024-11-03: Our work Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types Presented at MIT The Engine, SiPS 2024, USA.",
                     "🎉 2024-09-16: Our paper FireLoc was accepted on Top Tier Conference for Embedded Networked Sensor Systems (SenSys 2024)",
-                    "🎉 2024-09-10: Our paper AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field accepted to BMVC 2024"
+                    "🎉 2024-09-10: Our paper AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field accepted to BMVC 2024."
                   ].map((news, index) => (
                     <Card key={index} className="bg-gray-700">
                       <CardContent>
