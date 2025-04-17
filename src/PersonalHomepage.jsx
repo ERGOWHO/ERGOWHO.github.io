@@ -306,7 +306,7 @@ const PersonalHomepage = () => {
             }, {
               title: "AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field",
               authors: "Liu, R., Xu, R., Hu, Y., et al.",
-              conference: "BMVC 2024, Glasgow, UK.",
+              conference: "The 35th British Machine Vision Conference (BMVC) 2024, Glasgow, UK.",
               links: { paper: "https://arxiv.org/abs/2405.12369", project: "https://rongliu-leo.github.io/AtomGS/", Video: "https://www.youtube.com/watch?v=1B7oga_1BqE",  poster: "https://bmva-archive.org.uk/bmvc/2024/papers/Paper_577/poster.pdf"}
             }, {
               title: "FireFly: A Synthetic Dataset for Ember Detection in Wildfire",
@@ -321,7 +321,7 @@ const PersonalHomepage = () => {
             }, {
               title: "PLoRa: A Passive Long-Range Data Network from Ambient LoRa Transmissions",
               authors: "Peng, Y., Shangguan, L., Hu, Y., et al.",
-              conference: "SIGCOMM 2018, Budapest, Hungary. (First student author)",
+              conference: "ACM Special Interest Group on Data Communication (SIGCOMM), Budapest, Hungary. (First student author)",
               links: { paper: "https://dl.acm.org/doi/10.1145/3230543.3230567", Video: "https://www.youtube.com/watch?v=yHocu_n2udI" }
             }, {
               title: "EasyGo: Low-cost and Robust Geographic Opportunistic Sensing Routing in a Strip Topology Wireless Sensor Network",
@@ -336,12 +336,12 @@ const PersonalHomepage = () => {
             }, {
               title: "A Lightweight Robust Routing in Strip Wireless Sensor Network with Edge Detect Based Region Divided",
               authors: "Hu, Y., Liu, C., Xu, D., et al.",
-              conference: "the 14th Annual International Conference on Mobile Systems, Applications, and Services Companion.(MobiSys 2016), Singapore",
+              conference: "The 14th Annual International Conference on Mobile Systems, Applications, and Services Companion.(MobiSys), Singapore",
               links: { paper: "https://dl.acm.org/doi/abs/10.1145/2938559.2948811"}
             }, {
               title: "LSVS: Bringing Layer Slicing and Virtual Sinks to Geographic Opportunistic Routing in Strip WSNs",
               authors: "Liu, C., Fang, D., Chen, X., Hu, Y., et al.",
-              conference: "IEEE Fifth International Conference on Big Data and Cloud Computing",
+              conference: "IEEE Fifth International Conference on Big Data and Cloud Computing (BdCloud)",
               links: { paper: "https://ieeexplore.ieee.org/abstract/document/7310758"}
             }].map((pub, index) => (
               <motion.div key={index} whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
