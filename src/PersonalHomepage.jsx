@@ -291,7 +291,7 @@ const PersonalHomepage = () => {
 
         {/* Publications Section */}
         <Element name="publications" className="px-12 py-24 bg-gray-800">
-          <h2 className="text-4xl font-bold mb-6">Selected Publications</h2>
+          <h2 className="text-4xl font-bold mb-6">Selected Publications (citations: 371)</h2>
           <div className="space-y-6">
             {[{
               title: "SplatMAP: Online Dense Monocular SLAM with 3D Gaussian Splatting",
