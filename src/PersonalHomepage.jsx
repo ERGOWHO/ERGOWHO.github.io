@@ -405,7 +405,7 @@ const PersonalHomepage = () => {
                   { date: '2024 - Present', description: 'USC ICT Graduate Research Assistant' },
                   { date: '2025 5.19 - 8.22', description: 'Futurewei Co. Internship' },
                   { date: '2024 5.19 - 8.22', description: 'USC ICT Internship' },
-                  { date: '2023', description: 'USC EE450: Introduction to Computer Networks' },
+                  { date: '2023', description: 'USC Teaching Assistant EE450: Introduction to Computer Networks' },
                   { date: '2021-2022', description: 'USC Research Assistant' }
                 ].map((item, index) => (
                   <div key={index} className="mb-8">
@@ -426,7 +426,9 @@ const PersonalHomepage = () => {
                   { date: '2025', description: 'SIGGRAPH 2025: Technical Papers Reviewer' },
                   { date: '2023', description: 'NeurIPS 2023: SyntheticDataGenAI Workshop Reviewer' },
                   { date: '2022', description: 'NeurIPS 2022: Workshop on Synthetic Data Reviewer' },
-                  { date: '2022 - 2024', description: 'Mentorship: VSI, SURE, CURVE Fellowship' }
+                  { date: '2022 - 2024', description: 'Mentorship: VSI, SURE, CURVE Fellowship' },
+                  { date: '2015- 2016', description: 'Vice President of the Student Union, School of Information Science and Technology, Northwest University' },
+                  { date: '2014- 2015', description: 'Director of the Academic Department (Student Union), School of Information Science and Technology, Northwest University' },
                 ].map((item, index) => (
                   <div key={index} className="mb-8">
                     <div className="absolute left-[-10px] top-2 w-4 h-4 bg-blue-400 rounded-full"></div>
