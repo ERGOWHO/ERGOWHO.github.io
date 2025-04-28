@@ -422,8 +422,8 @@ const PersonalHomepage = () => {
               <h3 className="text-3xl font-bold mb-4">Service</h3>
               <div className="relative border-l-2 border-gray-500 pl-6">
                 {[
-                  { date: '2024', description: 'ACM SenSys 2024 - Program Committee' },
                   { date: '2025', description: 'SIGGRAPH 2025: Technical Papers Reviewer' },
+                  { date: '2024', description: 'ACM SenSys 2024 - Program Committee' },
                   { date: '2023', description: 'NeurIPS 2023: SyntheticDataGenAI Workshop Reviewer' },
                   { date: '2022', description: 'NeurIPS 2022: Workshop on Synthetic Data Reviewer' },
                   { date: '2022 - 2024', description: 'Mentorship: VSI, SURE, CURVE Fellowship' },
