@@ -158,7 +158,7 @@ const PersonalHomepage = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-4">News & Updates</h3>
                 <div className="space-y-3">
-                  {[
+                  {["🎉 2025-04-29: I received 2025 Viterbi Graduate Student Award and Will attend the Award Banquet this Thursday",
                     "🎉 2025-03-24: Our paper on SplatMap: Online Dense Monocular SLAM with 3D Gaussian Splatting is accepted to 2025 ACM SIGGRAPH SYMPOSIUM ON INTERACTIVE 3D GRAPHICS AND GAMES(I3D 2025) with oral presentation.",
                     "🔥 2024-11-05: Our work FireLoc: Low-latency Multi-modal Wildfire Geolocation Presented at Sensys 2024, Hangzhou, China",
                     "🔥 2024-11-03: Our work Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types Presented at MIT The Engine, SiPS 2024, USA.",
