@@ -445,6 +445,7 @@ const PersonalHomepage = () => {
         <Element name="awards" className="px-12 py-24 bg-gray-800">
           <h2 className="text-4xl font-bold mb-6">Awards</h2>
           <ul className="list-disc ml-8 text-gray-300">
+            <li>2025 Viterbi Graduate Student Award</li>
             <li>SiPS2024 Students and Young Professionals Funding</li>
             <li>Travel Grant for PhD Students and Postdoctoral Scholars (2024 - 2025)</li>
             <li>First-class University Scholarship (Top 10%) - Northwest University (2013 - 2018)</li>
