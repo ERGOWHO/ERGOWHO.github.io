@@ -73,7 +73,7 @@ const PersonalHomepage = () => {
               animate={{ opacity: Math.max(1 - scrollY / 300, 0) }}
               className="text-4xl text-white"
             >
-              Ph.D. Student | Computer Vision & Machine Learning
+              Ph.D. Candidate | Computer Vision & Machine Learning
             </motion.p>
             <motion.p
               initial={{ opacity: 1 }}
@@ -163,9 +163,7 @@ const PersonalHomepage = () => {
                     "🎉 2025-04-29: I received 2025 Viterbi Graduate Student Award and Will attend the Award Banquet this Thursday",
                     "🎉 2025-03-24: Our paper on SplatMap: Online Dense Monocular SLAM with 3D Gaussian Splatting is accepted to 2025 ACM SIGGRAPH SYMPOSIUM ON INTERACTIVE 3D GRAPHICS AND GAMES(I3D 2025) with oral presentation.",
                     "🔥 2024-11-05: Our work FireLoc: Low-latency Multi-modal Wildfire Geolocation Presented at Sensys 2024, Hangzhou, China",
-                    "🔥 2024-11-03: Our work Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types Presented at MIT The Engine, SiPS 2024, USA.",
-                    "🎉 2024-09-16: Our paper FireLoc was accepted on Top Tier Conference for Embedded Networked Sensor Systems (SenSys 2024)",
-                    "🎉 2024-09-10: Our paper AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field accepted to BMVC 2024."
+                    "🔥 2024-11-03: Our work Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types Presented at MIT The Engine, SiPS 2024, USA."
                   ].map((news, index) => (
                     <Card key={index} className="bg-gray-700">
                       <CardContent>
