@@ -125,7 +125,7 @@ const PersonalHomepage = () => {
                   I am a researcher specializing in:
                 </p>
                 <ul className="list-disc pl-6 mb-4">
-                  <li><strong>3D Vision & Geometry:</strong> 3D Gaussian Splatting, Point Cloud Rendering, NeRF, SLAM, SfM, Relighting.</li>
+                  <li><strong>3D/4D Vision & Geometry:</strong> 3D Gaussian Splatting, Point Cloud Rendering, NeRF, SLAM, SfM, Relighting.</li>
                   <li><strong>2D Object Detection and Synthetic Dataset:</strong> YOLO, DETR, Unreal Engine etc.</li>
                   <li><strong>Wireless Communication:</strong> Backscatter, LoRa IoT, FPGA, Embedded Systems.</li>
                 </ul>
@@ -142,7 +142,7 @@ const PersonalHomepage = () => {
                 <div className="space-y-4">
                   {["01/2021 to 05/2026 (Expected) - Ph.D. in Computer Engineering, USC (GPA 3.83/4.0)",
                     "01/2021 to 12/2023 - M.S. in Computer Engineering, USC (GPA 3.88/4.0)",
-                    // "Ph.D. in Software Engineering (Transferred to USC), Northwest University - 09/2018 to 12/2020",
+                    "09/2018 to 05/2025 - Ph.D. (Degree) in Software Engineering, Northwest University",
                     "09/2013 to 06/2017 - B.S. in Computer Science and Technology, Northwest University (Graduated with Honors)"
                   ].map((edu, index) => (
                     <Card key={index} className="bg-gray-700 shadow-md">
@@ -158,12 +158,11 @@ const PersonalHomepage = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-4">News & Updates</h3>
                 <div className="space-y-3">
-                  {["🎉 2025-05-12: I passed PhD Qualify Exam",
+                  {["🎉 2025-08-25: I got the extend Internship offer from FutureWei co.",
                     "🔥 2025-05-12: Our work SplatMap paper presented at I3D 2025, Jersey city.",
                     "🎉 2025-04-29: I received 2025 Viterbi Graduate Student Award and Will attend the Award Banquet this Thursday",
                     "🎉 2025-03-24: Our paper on SplatMap: Online Dense Monocular SLAM with 3D Gaussian Splatting is accepted to 2025 ACM SIGGRAPH SYMPOSIUM ON INTERACTIVE 3D GRAPHICS AND GAMES(I3D 2025) with oral presentation.",
-                    "🔥 2024-11-05: Our work FireLoc: Low-latency Multi-modal Wildfire Geolocation Presented at Sensys 2024, Hangzhou, China",
-                    "🔥 2024-11-03: Our work Let’s Roll: Synthetic Dataset Analysis for Pedestrian Detection Across Different Shutter Types Presented at MIT The Engine, SiPS 2024, USA."
+                    "🔥 2024-11-05: Our work FireLoc: Low-latency Multi-modal Wildfire Geolocation Presented at Sensys 2024, Hangzhou, China"
                   ].map((news, index) => (
                     <Card key={index} className="bg-gray-700">
                       <CardContent>
@@ -291,7 +290,7 @@ const PersonalHomepage = () => {
 
         {/* Publications Section */}
         <Element name="publications" className="px-12 py-24 bg-gray-800">
-          <h2 className="text-4xl font-bold mb-6">Selected Publications (citations: 371)</h2>
+          <h2 className="text-4xl font-bold mb-6">Selected Publications (citations: 404)</h2>
           <div className="space-y-6">
             {[{
               title: "SplatMAP: Online Dense Monocular SLAM with 3D Gaussian Splatting",
@@ -318,7 +317,17 @@ const PersonalHomepage = () => {
               authors: "Fu, X., Hu, Y., Sutrave, P., et al.",
               conference: "The 22nd ACM Conference on Embedded Networked Sensor Systems ( SenSys 2024), Hangzhou, China.",
               links: { paper: "https://dl.acm.org/doi/abs/10.1145/3666025.3699318", news: "https://sustainability.usc.edu/2025/02/05/could-crowdsourcing-hold-the-key-to-early-wildfire-detection/"}
-            }, {
+            },{
+              title: "IDU: Incremental Dynamic Update of Existing 3D Virtual Environments with New Imagery Data",
+              authors: "Chen, M., Leal, L., Hu, Y., et al.",
+              conference: "2025 Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC)",
+              links: { paper: "https://arxiv.org/pdf/2508.17579" }
+            },{
+              title: "Descrip3D: Enhancing Large Language Model-based 3D Scene Understanding with Object-Level Text Descriptions",
+              authors: "Xue, J., Zhao, G., Yao, J., Chen H., Hu, Y., et al.",
+              // conference: "2025 ACM SIGGRAPH SYMPOSIUM ON INTERACTIVE 3D GRAPHICS AND GAMES( I3D 2025)",
+              links: { paper: "https://arxiv.org/abs/2507.14555" }
+            },{
               title: "PLoRa: A Passive Long-Range Data Network from Ambient LoRa Transmissions",
               authors: "Peng, Y., Shangguan, L., Hu, Y., et al.",
               conference: "ACM Special Interest Group on Data Communication (SIGCOMM), Budapest, Hungary. (First student author)",
@@ -401,9 +410,9 @@ const PersonalHomepage = () => {
             <div>
               <h3 className="text-3xl font-bold mb-4">Work</h3>
               <div className="relative border-l-2 border-gray-500 pl-6">
-                {[
-                  { date: '2024 - Present', description: 'USC ICT Graduate Research Assistant' },
+                {[{ date: '2025 8.25 - 11.12', description: 'Extended Futurewei Co. Internship' },
                   { date: '2025 5.19 - 8.22', description: 'Futurewei Co. Internship' },
+                  { date: '2024 - Present', description: 'USC ICT Graduate Research Assistant' },
                   { date: '2024 5.19 - 8.22', description: 'USC ICT Internship' },
                   { date: '2023', description: 'USC Teaching Assistant EE450: Introduction to Computer Networks' },
                   { date: '2021-2022', description: 'USC Research Assistant' }
